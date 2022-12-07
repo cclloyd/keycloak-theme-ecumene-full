@@ -1,4 +1,4 @@
-import React, { useState, memo } from "react";
+import React, {useState, memo, useEffect} from "react";
 import { useConstCallback } from "powerhooks/useConstCallback";
 import type { FormEventHandler } from "react";
 import {KcContextBase, KcProps} from "keycloakify";
@@ -42,7 +42,8 @@ const Login = memo((props: LoginProps) => {
             displayInfo={social.displayInfo}
             displayWide={realm.password && social.providers !== undefined}
             doFetchDefaultThemeResources={false}
-            headerNode={<div><img src={'images/logo-reclaimer.png'} id={'logo'}/><span>{msg("doLogIn")}</span></div>}
+            //headerNode={<><img src={'images/logo-reclaimer.png'} id={'logo'}/><span>{msg("doLogIn")}</span></>}
+            headerNode={msg("doLogIn")}
             formNode={
                 <div id="kc-form" className={clsx(realm.password && social.providers !== undefined && kcProps.kcContentWrapperClass)}>
                     <div
