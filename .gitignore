@@ -1,3 +1,6 @@
+.idea
+.fleet
+
 # Logs
 logs
 *.log
