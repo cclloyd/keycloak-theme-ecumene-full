@@ -9,6 +9,7 @@ body, html {
   display: flex;
   justify-content: center;
   align-items: center;
+  font-family: "Coda", sans-serif;
 }
 
 body {
@@ -90,7 +91,7 @@ a {
   padding: 0 0.5rem;
   height: 30px;
 }
-.login-pf-page .form-group label {
+.login-pf-page .form-group label.control-label {
   text-align: center;
   font-family: "Coda", sans-serif;
   font-size: 11pt;
@@ -107,18 +108,18 @@ a {
   transition-duration: 150ms;
   transition-timing-function: ease-out;
 }
-.login-pf-page .form-group label span {
+.login-pf-page .form-group label.control-label span {
   width: 100%;
   height: 100%;
   display: block;
 }
 @media (max-width: 992px) {
-  .login-pf-page .form-group label {
+  .login-pf-page .form-group label.control-label {
     height: 40px;
     line-height: 40px;
   }
 }
-.login-pf-page .form-group:focus-within label {
+.login-pf-page .form-group .active {
   color: rgba(255, 255, 255, 0.5);
   font-size: 6pt;
   height: 10px;
@@ -126,12 +127,21 @@ a {
   top: -10px;
 }
 @media (max-width: 992px) {
-  .login-pf-page .form-group:focus-within label {
+  .login-pf-page .form-group .active {
     font-size: 8pt;
     height: 10px;
     line-height: 10px;
     top: -10px;
   }
+}
+.login-pf-page .form-group .kc-form-options {
+  text-align: center;
+}
+.login-pf-page .form-group .checkbox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.25rem;
 }
 .login-pf-page .form-group input.form-control {
   user-select: none;
@@ -170,6 +180,54 @@ a {
   border-color: rgba(255, 255, 255, 0.4);
   background-color: rgba(255, 255, 255, 0.12);
   box-shadow: inset 0 0 6px rgba(255, 255, 255, 0.14);
+}
+.login-pf-page .login-pf-settings {
+  margin-bottom: 0;
+}
+.login-pf-page .rememberMe {
+  margin-bottom: 1rem;
+}
+.login-pf-page input[type=submit] {
+  width: 100px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: rgba(255, 255, 255, 0.25);
+  background-color: rgba(255, 255, 255, 0.1);
+  box-shadow: inset 0 0 4px rgba(255, 255, 255, 0.05);
+  padding: 0.25rem 1.25rem;
+  text-shadow: none;
+  min-width: 0;
+  font-family: "Coda", sans-serif;
+  text-align: center;
+  font-size: 10pt;
+  color: #eee;
+  margin: 0 0.25rem;
+  transition-duration: 150ms;
+  transition-timing-function: ease-out;
+  transition-property: border-color, background-color, box-shadow;
+  height: 30px;
+  border-radius: 15px;
+  text-transform: uppercase;
+  font-weight: normal;
+}
+@media (max-width: 992px) {
+  .login-pf-page input[type=submit] {
+    height: 40px;
+    border-radius: 20px;
+    padding: 0.25rem 2rem;
+    font-size: 10pt;
+    text-transform: uppercase;
+  }
+}
+.login-pf-page input[type=submit]:hover {
+  border-color: rgba(255, 255, 255, 0.3);
+  background-color: rgba(255, 255, 255, 0.15);
+  box-shadow: inset 0 0 6px rgba(255, 255, 255, 0.1);
+}
+.login-pf-page input[type=submit]:active {
+  border-color: rgba(255, 255, 255, 0.5);
+  background-color: rgba(255, 255, 255, 0.25);
+  box-shadow: inset 0 0 6px rgba(255, 255, 255, 0.3);
 }
 
 /*# sourceMappingURL=app.css.map */

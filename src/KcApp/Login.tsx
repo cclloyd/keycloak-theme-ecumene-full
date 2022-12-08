@@ -36,6 +36,25 @@ const Login = memo((props: LoginProps) => {
         formElement.submit();
     });
 
+    const handleChange = (e: any) => {
+        if (e.target.value.length > 0) {
+            // @ts-ignore
+            document.querySelector(`label[for=${e.target.id}]`).classList.add('active');
+        }
+    }
+    const handleBlur = (e: any) => {
+        if (e.target.value.length === 0) {
+            // @ts-ignore
+            document.querySelector(`label[for=${e.target.id}]`).classList.remove('active');
+        }
+    }
+
+    const handleClick = (e: any) => {
+        const label = document.querySelector(`label[for=${e.target.id}]`);
+        // @ts-ignore
+        label.classList.add('active');
+    }
+
     return (
         <Template
             {...{ kcContext, i18n, doFetchDefaultThemeResources, ...kcProps }}
@@ -79,6 +98,9 @@ const Login = memo((props: LoginProps) => {
                                                     name={autoCompleteHelper}
                                                     defaultValue={login.username ?? ""}
                                                     type="text"
+                                                    onClick={handleClick}
+                                                    onChange={handleChange}
+                                                    onBlur={handleBlur}
                                                     {...(usernameEditDisabled
                                                         ? { "disabled": true }
                                                         : {
@@ -101,24 +123,23 @@ const Login = memo((props: LoginProps) => {
                                         name="password"
                                         type="password"
                                         autoComplete="off"
+                                        onClick={handleClick}
+                                        onChange={handleChange}
+                                        onBlur={handleBlur}
                                     />
                                 </div>
                                 <div className={clsx(kcProps.kcFormGroupClass, kcProps.kcFormSettingClass)}>
                                     <div id="kc-form-options">
                                         {realm.rememberMe && !usernameEditDisabled && (
                                             <div className="checkbox">
-                                                <label>
-                                                    <input
-                                                        tabIndex={3}
-                                                        id="rememberMe"
-                                                        name="rememberMe"
-                                                        type="checkbox"
-                                                        {...(login.rememberMe
-                                                            ? {
-                                                                "checked": true
-                                                            }
-                                                            : {})}
-                                                    />
+                                                <input
+                                                    tabIndex={3}
+                                                    id="rememberMe"
+                                                    name="rememberMe"
+                                                    type="checkbox"
+                                                    {...(login.rememberMe ? {"checked": true} : {})}
+                                                />
+                                                <label htmlFor={'rememberMe'}>
                                                     {msg("rememberMe")}
                                                 </label>
                                             </div>
@@ -165,12 +186,10 @@ const Login = memo((props: LoginProps) => {
                     </div>
                     {realm.password && social.providers !== undefined && (
                         <div id="kc-social-providers" className={clsx(kcProps.kcFormSocialAccountContentClass, kcProps.kcFormSocialAccountClass)}>
-                            <ul
-                                className={clsx(
-                                    kcProps.kcFormSocialAccountListClass,
-                                    social.providers.length > 4 && kcProps.kcFormSocialAccountDoubleListClass
-                                )}
-                            >
+                            <ul className={clsx(
+                                kcProps.kcFormSocialAccountListClass,
+                                social.providers.length > 4 && kcProps.kcFormSocialAccountDoubleListClass
+                            )}>
                                 {social.providers.map(p => (
                                     <li key={p.providerId} className={clsx(kcProps.kcFormSocialAccountListLinkClass)}>
                                         <a href={p.loginUrl} id={`zocial-${p.alias}`} className={clsx("zocial", p.providerId)}>

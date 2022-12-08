@@ -23,10 +23,12 @@
     "license": "MIT",
     "keywords": [],
     "dependencies": {
+        "evt": "^2.4.1",
         "keycloakify": "^6.8.4",
         "react": "18.1.0",
         "react-dom": "18.1.0",
-        "evt": "^2.4.1"
+        "react-particles": "^2.6.0",
+        "tsparticles": "^2.6.0"
     },
     "devDependencies": {
         "@types/node": "^15.3.1",

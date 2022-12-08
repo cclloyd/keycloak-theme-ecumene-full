@@ -27,6 +27,7 @@ export default function KcApp({ kcContext }: Props) {
         ...defaultKcProps,
         // NOTE: The classes are defined in ./KcApp.css
         "kcHeaderWrapperClass": "my-color my-font",
+        "kcFormOptionsWrapperClass": "rememberMe"
     };
 
     return (

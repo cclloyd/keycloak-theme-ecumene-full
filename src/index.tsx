@@ -1,6 +1,7 @@
 import { createRoot } from "react-dom/client";
-import { StrictMode, lazy, Suspense } from "react";
+import React, { StrictMode, lazy, Suspense } from "react";
 import { kcContext } from "./KcApp/kcContext";
+import BGParticles from "./KcApp/BGParticles";
 
 const App = lazy(() => import("./App"));
 const KcApp = lazy(() => import("./KcApp"));
@@ -11,6 +12,9 @@ if (kcContext !== undefined) {
 
 createRoot(document.getElementById("root")!).render(
     <StrictMode>
-        <Suspense>{kcContext === undefined ? <App /> : <KcApp kcContext={kcContext} />}</Suspense>
+        <Suspense>{kcContext === undefined ? <App /> : <>
+            <BGParticles/>
+            <KcApp kcContext={kcContext} />
+        </>}</Suspense>
     </StrictMode>,
 );
