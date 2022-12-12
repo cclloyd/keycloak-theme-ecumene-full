@@ -131,18 +131,19 @@ const Login = memo((props: LoginProps) => {
                                 <div className={clsx(kcProps.kcFormGroupClass, kcProps.kcFormSettingClass)}>
                                     <div id="kc-form-options">
                                         {realm.rememberMe && !usernameEditDisabled && (
-                                            <div className="checkbox">
-                                                <input
-                                                    tabIndex={3}
-                                                    id="rememberMe"
-                                                    name="rememberMe"
-                                                    type="checkbox"
-                                                    {...(login.rememberMe ? {"checked": true} : {})}
-                                                />
-                                                <label htmlFor={'rememberMe'}>
-                                                    {msg("rememberMe")}
+                                            <>
+                                                <label htmlFor={'rememberMe'} className={'toggle'}>
+                                                    <input
+                                                        tabIndex={3}
+                                                        id="rememberMe"
+                                                        name="rememberMe"
+                                                        type="checkbox"
+                                                        {...(login.rememberMe ? {"checked": true} : {})}
+                                                    />
+                                                    <div className={'toggle-switch'}></div>
+                                                    <span className={'toggle-label'}>{msg("rememberMe")}</span>
                                                 </label>
-                                            </div>
+                                            </>
                                         )}
                                     </div>
                                     <div className={clsx(kcProps.kcFormOptionsWrapperClass)}>

@@ -57,24 +57,49 @@ a {
   color: rgba(255, 255, 255, 0.8);
   font-weight: normal;
   user-select: none;
-  margin-bottom: 1rem;
   text-transform: none;
 }
-.login-pf-page #logo {
+.login-pf-page #kc-header .kc-logo-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.login-pf-page #kc-header .kc-logo-text #logo {
   width: 100%;
-  height: auto;
   filter: drop-shadow(0 0 10px rgba(1, 188, 255, 0.9));
+  margin-bottom: -1rem;
 }
 @media (max-width: 992px) {
-  .login-pf-page #logo {
+  .login-pf-page #kc-header .kc-logo-text #logo {
     width: 85%;
   }
 }
-@media (max-width: 992px) {
-  .login-pf-page {
-    margin-top: 2rem;
-    margin-bottom: 3rem;
-  }
+.login-pf-page #kc-page-title {
+  margin: 0;
+  margin-top: -0.25rem;
+  font-size: 10pt;
+  font-family: "Coda", sans-serif;
+  font-weight: normal;
+  text-transform: uppercase;
+}
+.login-pf-page #kc-content #kc-content-wrapper .alert {
+  margin: 1.5rem 0.75rem;
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 2px;
+  padding: 0.5rem 0.5rem;
+  color: white;
+}
+.login-pf-page #kc-content #kc-content-wrapper .alert-success {
+  background-color: rgba(102, 187, 106, 0.25);
+  border-color: rgba(102, 187, 106, 0.5);
+  box-shadow: inset 0 0 7px rgba(102, 187, 106, 0.5), 0 0 3px rgba(102, 187, 106, 0.5);
+}
+.login-pf-page #kc-content #kc-content-wrapper .alert-error {
+  background-color: rgba(244, 67, 54, 0.25);
+  border-color: rgba(244, 67, 54, 0.5);
+  box-shadow: inset 0 0 7px rgba(244, 67, 54, 0.5), 0 0 3px rgba(244, 67, 54, 0.5);
 }
 .login-pf-page #kc-locale {
   display: none;
@@ -87,9 +112,14 @@ a {
 }
 .login-pf-page .form-group {
   position: relative;
-  margin-bottom: 1.5rem;
-  padding: 0 0.5rem;
+  margin-bottom: 1rem;
+  padding: 0 1.5rem;
   height: 30px;
+}
+@media (max-width: 992px) {
+  .login-pf-page .form-group {
+    margin-bottom: 1.5rem;
+  }
 }
 .login-pf-page .form-group label.control-label {
   text-align: center;
@@ -105,7 +135,7 @@ a {
   user-select: none;
   color: rgba(255, 255, 255, 0.8);
   transition-property: color, font-size, height, line-height, top;
-  transition-duration: 150ms;
+  transition-duration: 120ms;
   transition-timing-function: ease-out;
 }
 .login-pf-page .form-group label.control-label span {
@@ -115,11 +145,11 @@ a {
 }
 @media (max-width: 992px) {
   .login-pf-page .form-group label.control-label {
-    height: 40px;
-    line-height: 40px;
+    height: 34px;
+    line-height: 34px;
   }
 }
-.login-pf-page .form-group .active {
+.login-pf-page .form-group label.control-label.active {
   color: rgba(255, 255, 255, 0.5);
   font-size: 6pt;
   height: 10px;
@@ -127,21 +157,76 @@ a {
   top: -10px;
 }
 @media (max-width: 992px) {
-  .login-pf-page .form-group .active {
+  .login-pf-page .form-group label.control-label.active {
     font-size: 8pt;
     height: 10px;
     line-height: 10px;
     top: -10px;
   }
 }
-.login-pf-page .form-group .kc-form-options {
+.login-pf-page .form-group.login-pf-settings {
+  margin-bottom: 1rem;
+  margin-top: 1.5rem;
+}
+.login-pf-page .form-group.login-pf-settings .kc-form-options {
   text-align: center;
 }
-.login-pf-page .form-group .checkbox {
+.login-pf-page .form-group .rememberMe {
+  margin: 0.25rem 0 1.5rem 0;
+  font-size: 8pt;
+}
+.login-pf-page .form-group .toggle {
+  cursor: pointer;
+  height: 20px;
+  line-height: 20px;
   display: flex;
-  align-items: center;
   justify-content: center;
-  gap: 0.25rem;
+  align-items: center;
+}
+.login-pf-page .form-group .toggle input {
+  position: absolute;
+  visibility: hidden;
+}
+.login-pf-page .form-group .toggle input:checked + .toggle-switch {
+  background-color: #56c080;
+}
+.login-pf-page .form-group .toggle input:checked + .toggle-switch:before {
+  left: 18px;
+}
+.login-pf-page .form-group .toggle:hover .toggle-switch:before {
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.5);
+}
+.login-pf-page .form-group .toggle .toggle-switch {
+  display: inline-block;
+  background-color: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-sizing: border-box;
+  border-radius: 16px;
+  width: 42px;
+  height: 18px;
+  position: relative;
+  vertical-align: middle;
+  transition: background 0.25s;
+}
+.login-pf-page .form-group .toggle .toggle-switch:before, .login-pf-page .form-group .toggle .toggle-switch:after {
+  content: "";
+}
+.login-pf-page .form-group .toggle .toggle-switch:before {
+  display: block;
+  background: linear-gradient(to bottom, #fff 0%, #eee 100%);
+  border-radius: 30px;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.25);
+  width: 20px;
+  height: 12px;
+  position: absolute;
+  top: 2px;
+  left: 3px;
+  transition: left 0.25s;
+}
+.login-pf-page .form-group .toggle .toggle-label {
+  margin-left: 0.5rem;
+  position: relative;
+  user-select: none;
 }
 .login-pf-page .form-group input.form-control {
   user-select: none;
@@ -165,8 +250,8 @@ a {
 }
 @media (max-width: 992px) {
   .login-pf-page .form-group input.form-control {
-    height: 40px;
-    line-height: 40px;
+    height: 34px;
+    line-height: 34px;
     border-radius: 20px;
   }
 }
@@ -181,11 +266,8 @@ a {
   background-color: rgba(255, 255, 255, 0.12);
   box-shadow: inset 0 0 6px rgba(255, 255, 255, 0.14);
 }
-.login-pf-page .login-pf-settings {
-  margin-bottom: 0;
-}
-.login-pf-page .rememberMe {
-  margin-bottom: 1rem;
+.login-pf-page #kc-form-buttons {
+  margin-top: 1.5rem;
 }
 .login-pf-page input[type=submit] {
   width: 100px;
@@ -209,15 +291,6 @@ a {
   border-radius: 15px;
   text-transform: uppercase;
   font-weight: normal;
-}
-@media (max-width: 992px) {
-  .login-pf-page input[type=submit] {
-    height: 40px;
-    border-radius: 20px;
-    padding: 0.25rem 2rem;
-    font-size: 10pt;
-    text-transform: uppercase;
-  }
 }
 .login-pf-page input[type=submit]:hover {
   border-color: rgba(255, 255, 255, 0.3);
