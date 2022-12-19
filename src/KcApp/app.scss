@@ -94,17 +94,22 @@ a {
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      #logo {
-        width: 100%;
-        //height: auto;
+      .logo {
+        $logo-size: 280px;
+        width:  $logo-size;
+        height: $logo-size;
         filter: drop-shadow(0 0 10px rgba(1, 188, 255, 0.9));
         margin-bottom: -1rem;
+        background-image: url('images/logo-reclaimer.png');
+        background-size: 100% 100%;
         @include mobile {
           width: 85%;
         }
       }
     }
   }
+
+
 
   #kc-page-title {
     margin: 0;
@@ -218,7 +223,7 @@ a {
     }
 
     .rememberMe {
-      margin: 0.25rem 0 1.5rem 0;
+      padding: 0.25rem 0 1.5rem 0;
       font-size: 8pt;
     }
 

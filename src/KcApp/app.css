@@ -65,13 +65,16 @@ a {
   justify-content: center;
   align-items: center;
 }
-.login-pf-page #kc-header .kc-logo-text #logo {
-  width: 100%;
+.login-pf-page #kc-header .kc-logo-text .logo {
+  width: 280px;
+  height: 280px;
   filter: drop-shadow(0 0 10px rgba(1, 188, 255, 0.9));
   margin-bottom: -1rem;
+  background-image: url("images/logo-reclaimer.png");
+  background-size: 100% 100%;
 }
 @media (max-width: 992px) {
-  .login-pf-page #kc-header .kc-logo-text #logo {
+  .login-pf-page #kc-header .kc-logo-text .logo {
     width: 85%;
   }
 }
@@ -172,7 +175,7 @@ a {
   text-align: center;
 }
 .login-pf-page .form-group .rememberMe {
-  margin: 0.25rem 0 1.5rem 0;
+  padding: 0.25rem 0 1.5rem 0;
   font-size: 8pt;
 }
 .login-pf-page .form-group .toggle {

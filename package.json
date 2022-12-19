@@ -1,8 +1,8 @@
 {
-    "name": "keycloakify-advanced-starter",
+    "name": "ecumene-keycloak-theme",
     "homepage": "https://demo-app-advanced.keycloakify.dev",
-    "version": "1.0.6",
-    "description": "A starter/demo project for keycloakify",
+    "version": "1.0.1",
+    "description": "Theme for login pages for keycloak for the Ecumene network.",
     "repository": {
         "type": "git",
         "url": "git://github.com/garronej/keycloakify-advanced-starter.git"

@@ -3,7 +3,8 @@ import { useI18n as useI18nBase } from "keycloakify";
 type Props = Omit<Parameters<typeof useI18nBase>[0], "extraMessages">;
 
 
-const logo = '<div class="kc-logo-text"><img src="images/logo-reclaimer.png" id="logo"/><span>Ecumene</span></div>'
+//const logo = '<div class="kc-logo-text"><img src="static/media/images/logo-reclaimer.png" id="logo"/><span>Ecumene</span></div>'
+const logo = '<div class="kc-logo-text"><div class="logo"></div><span>Ecumene</span></div>'
 export function useI18n(props: Props) {
     const { kcContext } = props;
     return useI18nBase({
