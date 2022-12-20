@@ -3,7 +3,6 @@ import React, { StrictMode, lazy, Suspense } from "react";
 import { kcContext } from "./KcApp/kcContext";
 import BGParticles from "./KcApp/BGParticles";
 
-const App = lazy(() => import("./App"));
 const KcApp = lazy(() => import("./KcApp"));
 
 if (kcContext !== undefined) {
@@ -12,7 +11,7 @@ if (kcContext !== undefined) {
 
 createRoot(document.getElementById("root")!).render(
     <StrictMode>
-        <Suspense>{kcContext === undefined ? <App /> : <>
+        <Suspense>{kcContext === undefined ? <></> : <>
             <BGParticles/>
             <KcApp kcContext={kcContext} />
         </>}</Suspense>
