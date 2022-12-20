@@ -59,17 +59,17 @@ export default function BGParticles() {
                         type: 'image',
                         image: [
                             {
-                                src: 'images/particle.png',
+                                src: 'https://web.cclloyd.com/sites/sso/images/particle.webp',
                                 width: 30,
                                 height: 30,
                             },
                             {
-                                src: 'images/particle-dark.png',
+                                src: 'https://web.cclloyd.com/sites/sso/images/particle-dark.webp',
                                 width: 30,
                                 height: 30,
                             },
                             {
-                                src: 'images/particle-bright.png',
+                                src: 'https://web.cclloyd.com/sites/sso/images/particle-bright.webp',
                                 width: 30,
                                 height: 30,
                             },

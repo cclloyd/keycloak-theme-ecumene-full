@@ -1,6 +1,6 @@
 {
     "name": "ecumene-keycloak-theme",
-    "homepage": "https://web.cclloyd.com",
+    "homepage": "https://web.cclloyd.com/sites/sso",
     "version": "1.0.3",
     "description": "Theme for login pages for keycloak for the Ecumene network.",
     "repository": {
