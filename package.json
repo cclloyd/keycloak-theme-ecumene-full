@@ -1,7 +1,7 @@
 {
     "name": "ecumene-keycloak-theme",
-    "homepage": "https://demo-app-advanced.keycloakify.dev",
-    "version": "1.0.1",
+    "homepage": "https://web.cclloyd.com",
+    "version": "1.0.3",
     "description": "Theme for login pages for keycloak for the Ecumene network.",
     "repository": {
         "type": "git",
@@ -11,6 +11,7 @@
         "start": "react-scripts start",
         "build": "react-scripts build",
         "keycloak": "yarn build && keycloakify",
+        "external": "yarn build && keycloakify --external-assets",
         "download-builtin-keycloak-theme": "download-builtin-keycloak-theme 15.0.2"
     },
     "keycloakify": {
@@ -19,7 +20,7 @@
             "my-extra-page-2.ftl"
         ]
     },
-    "author": "u/garronej",
+    "author": "cclloyd",
     "license": "MIT",
     "keywords": [],
     "dependencies": {

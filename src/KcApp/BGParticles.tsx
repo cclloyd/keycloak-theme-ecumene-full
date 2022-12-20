@@ -1,4 +1,4 @@
-import "./app.css";
+//import "./app.css";
 import React, {lazy, Suspense, useCallback} from "react";
 import Particles from "react-particles";
 import { loadFull } from "tsparticles";

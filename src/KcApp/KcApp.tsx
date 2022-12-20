@@ -1,4 +1,4 @@
-import "./app.css";
+//import "./app.css";
 import { lazy, Suspense } from "react";
 import type { KcContext } from "./kcContext";
 import KcAppBase, { defaultKcProps } from "keycloakify";
@@ -26,8 +26,8 @@ export default function KcApp({ kcContext }: Props) {
         i18n,
         ...defaultKcProps,
         // NOTE: The classes are defined in ./KcApp.css
-        "kcHeaderWrapperClass": "my-color my-font",
-        "kcFormOptionsWrapperClass": "rememberMe"
+        //"kcHeaderWrapperClass": "my-color my-font",
+        //"kcFormOptionsWrapperClass": "rememberMe"
     };
 
     return (

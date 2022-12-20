@@ -146,15 +146,7 @@ const Login = memo((props: LoginProps) => {
                                             </>
                                         )}
                                     </div>
-                                    <div className={clsx(kcProps.kcFormOptionsWrapperClass)}>
-                                        {realm.resetPasswordAllowed && (
-                                            <span>
-                                                <a tabIndex={5} href={url.loginResetCredentialsUrl}>
-                                                    {msg("doForgotPassword")}
-                                                </a>
-                                            </span>
-                                        )}
-                                    </div>
+
                                 </div>
                                 <div id="kc-form-buttons" className={clsx(kcProps.kcFormGroupClass)}>
                                     <input
@@ -182,31 +174,20 @@ const Login = memo((props: LoginProps) => {
                                         disabled={isLoginButtonDisabled}
                                     />
                                 </div>
+                                {realm.resetPasswordAllowed && (
+                                    <div className={'forgot-password'}>
+                                        <a tabIndex={5} href={url.loginResetCredentialsUrl}>
+                                            {msg("doForgotPassword")}
+                                        </a>
+                                    </div>
+                                )}
                             </form>
                         )}
                     </div>
-                    {realm.password && social.providers !== undefined && (
-                        <div id="kc-social-providers" className={clsx(kcProps.kcFormSocialAccountContentClass, kcProps.kcFormSocialAccountClass)}>
-                            <ul className={clsx(
-                                kcProps.kcFormSocialAccountListClass,
-                                social.providers.length > 4 && kcProps.kcFormSocialAccountDoubleListClass
-                            )}>
-                                {social.providers.map(p => (
-                                    <li key={p.providerId} className={clsx(kcProps.kcFormSocialAccountListLinkClass)}>
-                                        <a href={p.loginUrl} id={`zocial-${p.alias}`} className={clsx("zocial", p.providerId)}>
-                                            <span>{p.displayName}</span>
-                                        </a>
-                                    </li>
-                                ))}
-                            </ul>
-                        </div>
-                    )}
                 </div>
             }
             infoNode={
-                realm.password &&
-                realm.registrationAllowed &&
-                !registrationDisabled && (
+                realm.password && realm.registrationAllowed && !registrationDisabled && false && (
                     <div id="kc-registration">
                         <span>
                             {msg("noAccount")}

@@ -1,4 +1,4 @@
-import "./App.css";
+//import "./App.css";
 import logo from "./logo.svg";
 import myimg from "./myimg.png";
 

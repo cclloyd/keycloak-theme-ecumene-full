@@ -1,0 +1,320 @@
+@import url("https://fonts.googleapis.com/css2?family=Coda:wght@400;800&display=swap");
+body, html {
+  min-width: 100vw;
+  min-height: 100vh;
+  background: #222;
+  color: #ddd;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Coda", sans-serif;
+}
+
+body {
+  background-image: url("images/wall-blue.webp");
+  background-attachment: fixed;
+  background-position: center center;
+}
+
+a {
+  color: white;
+}
+
+.login-pf-page {
+  width: 280px;
+  border-radius: 512px 512px 200px 200px;
+  background-color: rgba(255, 255, 255, 0.2);
+  text-align: center;
+  font-family: sans-serif;
+  color: #eee;
+  padding: 0 0 40px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.5), inset 0 0 5px rgba(18, 212, 255, 0.75);
+  background-image: url("images/wall-blue-vertical-blur.webp");
+  background-size: auto 100vh;
+  background-position: center center;
+  background-attachment: scroll;
+  overflow: hidden;
+}
+@supports (backdrop-filter: none) {
+  .login-pf-page {
+    background-color: rgba(255, 255, 255, 0.05);
+    background-image: none;
+    backdrop-filter: blur(20px) brightness(1.2);
+  }
+}
+@media (max-width: 992px) {
+  .login-pf-page {
+    width: 90vw;
+    max-width: 90vw;
+  }
+}
+.login-pf-page #kc-header {
+  font-size: 24pt;
+  font-family: "Coda", sans-serif;
+  color: #eee;
+  color: rgba(255, 255, 255, 0.8);
+  font-weight: normal;
+  user-select: none;
+  text-transform: none;
+}
+.login-pf-page #kc-header .kc-logo-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.login-pf-page #kc-header .kc-logo-text span {
+  margin: 0.5rem 0;
+}
+.login-pf-page #kc-header .kc-logo-text .logo {
+  width: 280px;
+  height: 280px;
+  filter: drop-shadow(0 0 10px rgba(1, 188, 255, 0.9));
+  margin-bottom: -1rem;
+  background-image: url("images/logo-reclaimer.webp");
+  background-size: 100% 100%;
+}
+@media (max-width: 992px) {
+  .login-pf-page #kc-header .kc-logo-text .logo {
+    width: 85%;
+  }
+}
+.login-pf-page #kc-page-title {
+  margin: 0 0 1rem 0;
+  font-size: 10pt;
+  font-family: "Coda", sans-serif;
+  font-weight: normal;
+  text-transform: uppercase;
+}
+.login-pf-page #kc-content #kc-content-wrapper #kc-form {
+  margin-top: 0.5rem;
+}
+.login-pf-page #kc-content #kc-content-wrapper .alert {
+  margin: 1.5rem 0.75rem;
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 2px;
+  padding: 0.5rem 0.5rem;
+  color: white;
+}
+.login-pf-page #kc-content #kc-content-wrapper .alert-success {
+  background-color: rgba(102, 187, 106, 0.25);
+  border-color: rgba(102, 187, 106, 0.5);
+  box-shadow: inset 0 0 7px rgba(102, 187, 106, 0.5), 0 0 3px rgba(102, 187, 106, 0.5);
+}
+.login-pf-page #kc-content #kc-content-wrapper .alert-error {
+  background-color: rgba(244, 67, 54, 0.25);
+  border-color: rgba(244, 67, 54, 0.5);
+  box-shadow: inset 0 0 7px rgba(244, 67, 54, 0.5), 0 0 3px rgba(244, 67, 54, 0.5);
+}
+.login-pf-page #kc-locale {
+  display: none;
+}
+.login-pf-page .alert {
+  margin: 2rem 0;
+}
+.login-pf-page #kc-registration {
+  font-size: 8pt;
+}
+.login-pf-page .form-group {
+  position: relative;
+  margin-bottom: 1rem;
+  padding: 0 1.5rem;
+  height: 30px;
+}
+@media (max-width: 992px) {
+  .login-pf-page .form-group {
+    margin-bottom: 1.5rem;
+  }
+}
+.login-pf-page .form-group label.control-label {
+  text-align: center;
+  font-family: "Coda", sans-serif;
+  font-size: 11pt;
+  position: absolute;
+  min-width: 200px;
+  height: 30px;
+  line-height: 30px;
+  top: 0;
+  left: 50%;
+  margin-left: -100px;
+  user-select: none;
+  color: rgba(255, 255, 255, 0.8);
+  transition-property: color, font-size, height, line-height, top;
+  transition-duration: 120ms;
+  transition-timing-function: ease-out;
+}
+.login-pf-page .form-group label.control-label span {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+@media (max-width: 992px) {
+  .login-pf-page .form-group label.control-label {
+    height: 34px;
+    line-height: 34px;
+  }
+}
+.login-pf-page .form-group label.control-label.active {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 6pt;
+  height: 10px;
+  line-height: 10px;
+  top: -10px;
+}
+@media (max-width: 992px) {
+  .login-pf-page .form-group label.control-label.active {
+    font-size: 8pt;
+    height: 10px;
+    line-height: 10px;
+    top: -10px;
+  }
+}
+.login-pf-page .form-group.login-pf-settings {
+  margin-bottom: 1rem;
+  margin-top: 1.5rem;
+}
+.login-pf-page .form-group.login-pf-settings .kc-form-options {
+  text-align: center;
+}
+.login-pf-page .form-group .toggle {
+  cursor: pointer;
+  height: 20px;
+  line-height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.login-pf-page .form-group .toggle input {
+  position: absolute;
+  visibility: hidden;
+}
+.login-pf-page .form-group .toggle input:checked + .toggle-switch {
+  background-color: #56c080;
+}
+.login-pf-page .form-group .toggle input:checked + .toggle-switch:before {
+  left: 18px;
+}
+.login-pf-page .form-group .toggle:hover .toggle-switch:before {
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.5);
+}
+.login-pf-page .form-group .toggle .toggle-switch {
+  display: inline-block;
+  background-color: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-sizing: border-box;
+  border-radius: 16px;
+  width: 42px;
+  height: 18px;
+  position: relative;
+  vertical-align: middle;
+  transition: background 0.25s;
+}
+.login-pf-page .form-group .toggle .toggle-switch:before, .login-pf-page .form-group .toggle .toggle-switch:after {
+  content: "";
+}
+.login-pf-page .form-group .toggle .toggle-switch:before {
+  display: block;
+  background: linear-gradient(to bottom, #fff 0%, #eee 100%);
+  border-radius: 30px;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.25);
+  width: 20px;
+  height: 12px;
+  position: absolute;
+  top: 2px;
+  left: 3px;
+  transition: left 0.25s;
+}
+.login-pf-page .form-group .toggle .toggle-label {
+  margin-left: 0.5rem;
+  position: relative;
+  user-select: none;
+}
+.login-pf-page .form-group input.form-control {
+  user-select: none;
+  font-size: 11pt;
+  border-radius: 15px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: rgba(255, 255, 255, 0.15);
+  background-color: rgba(255, 255, 255, 0.05);
+  box-shadow: inset 0 0 4px rgba(255, 255, 255, 0.05);
+  color: #eee;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 4px 8px;
+  font-family: "Coda", sans-serif;
+  text-align: center;
+  transition-duration: 150ms;
+  transition-timing-function: ease-out;
+  transition-property: border-color, background-color, box-shadow;
+  height: 30px;
+}
+@media (max-width: 992px) {
+  .login-pf-page .form-group input.form-control {
+    height: 34px;
+    line-height: 34px;
+    border-radius: 20px;
+  }
+}
+.login-pf-page .form-group input.form-control:hover {
+  border-color: rgba(255, 255, 255, 0.2);
+  background-color: rgba(255, 255, 255, 0.08);
+  box-shadow: inset 0 0 8px rgba(255, 255, 255, 0.1);
+}
+.login-pf-page .form-group input.form-control:focus {
+  outline: none;
+  border-color: rgba(255, 255, 255, 0.4);
+  background-color: rgba(255, 255, 255, 0.12);
+  box-shadow: inset 0 0 6px rgba(255, 255, 255, 0.14);
+}
+.login-pf-page #kc-form-buttons {
+  margin-top: 1rem;
+}
+.login-pf-page .forgot-password a {
+  padding: 0.25rem 0 1.5rem 0;
+  font-size: 8pt;
+  text-decoration: none;
+  color: #ddd;
+  transition: color 175ms;
+}
+.login-pf-page .forgot-password a:hover {
+  color: white;
+}
+.login-pf-page input[type=submit] {
+  width: 100px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: rgba(255, 255, 255, 0.25);
+  background-color: rgba(255, 255, 255, 0.1);
+  box-shadow: inset 0 0 4px rgba(255, 255, 255, 0.05);
+  padding: 0.25rem 1.25rem;
+  text-shadow: none;
+  min-width: 0;
+  font-family: "Coda", sans-serif;
+  text-align: center;
+  font-size: 10pt;
+  color: #eee;
+  margin: 0 0.25rem;
+  transition-duration: 150ms;
+  transition-timing-function: ease-out;
+  transition-property: border-color, background-color, box-shadow;
+  height: 30px;
+  border-radius: 15px;
+  text-transform: uppercase;
+  font-weight: normal;
+}
+.login-pf-page input[type=submit]:hover {
+  border-color: rgba(255, 255, 255, 0.3);
+  background-color: rgba(255, 255, 255, 0.15);
+  box-shadow: inset 0 0 6px rgba(255, 255, 255, 0.1);
+}
+.login-pf-page input[type=submit]:active {
+  border-color: rgba(255, 255, 255, 0.5);
+  background-color: rgba(255, 255, 255, 0.25);
+  box-shadow: inset 0 0 6px rgba(255, 255, 255, 0.3);
+}
+
+/*# sourceMappingURL=app.css.map */
