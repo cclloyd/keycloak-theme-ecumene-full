@@ -12,7 +12,7 @@ if (kcContext !== undefined) {
 
 createRoot(document.getElementById("root")!).render(
     <StrictMode>
-        <Suspense>{kcContext === undefined ? <App /> : <>
+        <Suspense>{kcContext === undefined ? <></> : <>
             <BGParticles/>
             <KcApp kcContext={kcContext} />
         </>}</Suspense>

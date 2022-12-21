@@ -165,68 +165,10 @@ a {
   }
 }
 .login-pf-page .form-group.login-pf-settings {
-  margin-bottom: 1rem;
-  margin-top: 1.5rem;
+  margin: 0;
 }
 .login-pf-page .form-group.login-pf-settings .kc-form-options {
   text-align: center;
-}
-.login-pf-page .form-group .rememberMe {
-  margin: 0.25rem 0 1.5rem 0;
-  font-size: 8pt;
-}
-.login-pf-page .form-group .toggle {
-  cursor: pointer;
-  height: 20px;
-  line-height: 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.login-pf-page .form-group .toggle input {
-  position: absolute;
-  visibility: hidden;
-}
-.login-pf-page .form-group .toggle input:checked + .toggle-switch {
-  background-color: #56c080;
-}
-.login-pf-page .form-group .toggle input:checked + .toggle-switch:before {
-  left: 18px;
-}
-.login-pf-page .form-group .toggle:hover .toggle-switch:before {
-  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.5);
-}
-.login-pf-page .form-group .toggle .toggle-switch {
-  display: inline-block;
-  background-color: rgba(255, 255, 255, 0.15);
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  box-sizing: border-box;
-  border-radius: 16px;
-  width: 42px;
-  height: 18px;
-  position: relative;
-  vertical-align: middle;
-  transition: background 0.25s;
-}
-.login-pf-page .form-group .toggle .toggle-switch:before, .login-pf-page .form-group .toggle .toggle-switch:after {
-  content: "";
-}
-.login-pf-page .form-group .toggle .toggle-switch:before {
-  display: block;
-  background: linear-gradient(to bottom, #fff 0%, #eee 100%);
-  border-radius: 30px;
-  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.25);
-  width: 20px;
-  height: 12px;
-  position: absolute;
-  top: 2px;
-  left: 3px;
-  transition: left 0.25s;
-}
-.login-pf-page .form-group .toggle .toggle-label {
-  margin-left: 0.5rem;
-  position: relative;
-  user-select: none;
 }
 .login-pf-page .form-group input.form-control {
   user-select: none;
@@ -266,8 +208,75 @@ a {
   background-color: rgba(255, 255, 255, 0.12);
   box-shadow: inset 0 0 6px rgba(255, 255, 255, 0.14);
 }
+.login-pf-page .toggle {
+  cursor: pointer;
+  height: 20px;
+  line-height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.login-pf-page .toggle input {
+  position: absolute;
+  visibility: hidden;
+}
+.login-pf-page .toggle input:checked + .toggle-switch {
+  background-color: #56c080;
+}
+.login-pf-page .toggle input:checked + .toggle-switch:before {
+  left: 18px;
+}
+.login-pf-page .toggle:hover .toggle-switch:before {
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.5);
+}
+.login-pf-page .toggle .toggle-switch {
+  display: inline-block;
+  background-color: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-sizing: border-box;
+  border-radius: 16px;
+  width: 42px;
+  height: 18px;
+  position: relative;
+  vertical-align: middle;
+  transition: background 0.25s;
+}
+.login-pf-page .toggle .toggle-switch:before, .login-pf-page .toggle .toggle-switch:after {
+  content: "";
+}
+.login-pf-page .toggle .toggle-switch:before {
+  display: block;
+  background: linear-gradient(to bottom, #fff 0%, #eee 100%);
+  border-radius: 30px;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.25);
+  width: 20px;
+  height: 12px;
+  position: absolute;
+  top: 2px;
+  left: 3px;
+  transition: left 0.25s;
+}
+.login-pf-page .toggle .toggle-label {
+  margin-left: 0.5rem;
+  position: relative;
+  user-select: none;
+}
+.login-pf-page .rememberMe, .login-pf-page #kc-registration {
+  margin: 0 0 0.25rem 0;
+  font-size: 8pt;
+}
+.login-pf-page .rememberMe a, .login-pf-page #kc-registration a {
+  text-decoration: none;
+  opacity: 0.8;
+  transition: 175ms opacity;
+  display: inline-block;
+  margin: 0 0.25rem;
+}
+.login-pf-page .rememberMe a:hover, .login-pf-page #kc-registration a:hover {
+  opacity: 1;
+}
 .login-pf-page #kc-form-buttons {
-  margin-top: 1.5rem;
+  margin-top: 1rem;
 }
 .login-pf-page input[type=submit] {
   width: 100px;
